@@ -1,0 +1,31 @@
+[project]
+name = "ZipfLangAdapt"
+version = "0.0.1"
+description = "This repository is the implementation code for the paper - Human-machine Interactions with Clinical Phrase Prediction System, Aligning with Zipf’s Least Effort Principle?"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "numpy>=1.24.3",
+    "pandas>=2.0.1",
+    "argparse>=1.4.0",
+    "scipy>=1.9.3",
+    "plotly>=5.14.1",
+    "nltk>=3.8.1",
+    "wordcloud>=1.9.2",
+    "pyenchant>=3.2.2",
+    "networkx>=3.1",
+    "swig>=3.0.12",
+    "oapackage>=2.7.13",
+]
+
+[tool.pdm.dependencies]
+oapackage = {version = ">=2.7.7", markers = "numpy"}
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+
+[tool.pdm.scripts]
+clean_project = {cmd = "rm -rf __pypackages__"}
